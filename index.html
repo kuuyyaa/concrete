@@ -76,18 +76,18 @@
     <section class="page-section store" id="store">
         <h2>In Store</h2>
         <hr class="inv-hr">
-        <!-- JEWELLERY -->
+        <div class="stock">
+            <!-- JEWELLERY -->
         <button data-state="visible" class="card jewellery" id="card">
-            <!-- <img src="/media/images/Laura_Jewellery.png" loading="lazy" class="img" /> -->
             <div class="header">
                 <!-- <h3>Subtitle</h3> -->
                 <h2>Jewellery</h2>
             </div>
         </button>
-        <div data-state="hidden" class="card jewellery2" id="expandableCard">
+        <div data-state="hidden" class="card jewellery-expandable" id="expandableCard">
             <img src="/media/images/Laura_Jewellery.png" loading="lazy" class="img" />
             <div class="header">
-                <!-- <h3>handmade</h3> -->
+                <!-- <h3>Subtitle</h3> -->
                 <h2>Jewellery</h2>
             </div>
             <button id="close">Close</button>
@@ -98,18 +98,18 @@
                 consequuntur explicabo.
             </div>
         </div>
-        <!-- CLOTHING -->
+        </div>
+        
+        <div class="stock">
+            <!-- CLOTHING -->
         <button data-state="visible" class="card brands" id="card">
-            <!-- <img src="/media/images/Laura_Jewellery.png" loading="lazy" class="img" /> -->
             <div class="header">
-                <!-- <h3>Subtitle</h3> -->
                 <h2>Brands</h2>
             </div>
         </button>
-        <div data-state="hidden" class="card brands2" id="expandableCard">
+        <div data-state="hidden" class="card brands-expandable" id="expandableCard">
             <img src="/media/images/Brands.png" loading="lazy" class="img" />
             <div class="header">
-                <!-- <h3>handmade</h3> -->
                 <h2>Brands</h2>
             </div>
             <button id="close">Close</button>
@@ -120,6 +120,31 @@
                 consequuntur explicabo.
             </div>
         </div>
+        </div>
+
+        <div class="stock">
+            <!-- MAGAZINES -->
+        <button data-state="visible" class="card magazines" id="card">
+            <div class="header">
+                <h2>Magazines</h2>
+            </div>
+        </button>
+        <div data-state="hidden" class="card magazines-expandable" id="expandableCard">
+            <img src="/media/images/Brands.png" loading="lazy" class="img" />
+            <div class="header">
+
+                <h2>Magazines</h2>
+            </div>
+            <button id="close">Close</button>
+            <div class="content">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus,
+                dolor! Error nostrum quos illum aperiam! Mollitia praesentium excepturi
+                dolorum, odio perferendis consectetur earum possimus quis in eum ab
+                consequuntur explicabo.
+            </div>
+        </div>
+        </div>
+        
     </section>
 
     <!-- External JS Scripts -->
