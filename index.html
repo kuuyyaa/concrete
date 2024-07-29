@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Concrete01</title>
+    <link href="css/styles.css" rel="stylesheet" />
+
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Judson:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="index.html">
+                <img src="./media/logos/CONCRETE01_LOGO_h3_10.png" alt="Logo of an Ox" id="nav-logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <hr class="inv-hr nav-divider">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about-me">In Store<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Colabs & Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Workshop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#marketing-package">Marketing Package</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tattoo-residents">Tattoo Residents</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <hr class="inv-hr nav-divider">
+                </ul>
+            </div>
+        </nav>
+        
+        <!-- Hero -->
+        <div class="jumbotron">
+            <div class="jumbotron-body">
+                <h1 class="display-4">welcome <span class="bold-text">home</span>,</h1>
+                <h1 class="display-4">baby.</h1>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-section intro" id="intro">
+        <div class="container">
+            <div class="card intro-card" style="width: 100%; border: none; background-image: url('../media/images/frontDoor.jpg');">
+                <div class="intro-body">
+                    <p class="typewrite" data-period="2000" data-type='[ "Archive Fashion", "Independent Designers", "Handmade Jewellery", "Magazines", "Tattoo Shop" ]'>
+                        <span class="wrap"></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section store" id="store">
+        <h2>In Store</h2>
+        <hr class="inv-hr">
+        <!-- JEWELLERY -->
+        <button data-state="visible" class="card jewellery" id="card">
+            <!-- <img src="/media/images/Laura_Jewellery.png" loading="lazy" class="img" /> -->
+            <div class="header">
+                <!-- <h3>Subtitle</h3> -->
+                <h2>Jewellery</h2>
+            </div>
+        </button>
+        <div data-state="hidden" class="card jewellery2" id="expandableCard">
+            <img src="/media/images/Laura_Jewellery.png" loading="lazy" class="img" />
+            <div class="header">
+                <!-- <h3>handmade</h3> -->
+                <h2>Jewellery</h2>
+            </div>
+            <button id="close">Close</button>
+            <div class="content">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus,
+                dolor! Error nostrum quos illum aperiam! Mollitia praesentium excepturi
+                dolorum, odio perferendis consectetur earum possimus quis in eum ab
+                consequuntur explicabo.
+            </div>
+        </div>
+        <!-- CLOTHING -->
+        <button data-state="visible" class="card brands" id="card">
+            <!-- <img src="/media/images/Laura_Jewellery.png" loading="lazy" class="img" /> -->
+            <div class="header">
+                <!-- <h3>Subtitle</h3> -->
+                <h2>Brands</h2>
+            </div>
+        </button>
+        <div data-state="hidden" class="card brands2" id="expandableCard">
+            <img src="/media/images/Brands.png" loading="lazy" class="img" />
+            <div class="header">
+                <!-- <h3>handmade</h3> -->
+                <h2>Brands</h2>
+            </div>
+            <button id="close">Close</button>
+            <div class="content">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus,
+                dolor! Error nostrum quos illum aperiam! Mollitia praesentium excepturi
+                dolorum, odio perferendis consectetur earum possimus quis in eum ab
+                consequuntur explicabo.
+            </div>
+        </div>
+    </section>
+
+    <!-- External JS Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
+
+    <!-- Custom JS Scripts -->
+    <script src="js/typewrite.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
+

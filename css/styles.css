@@ -1,0 +1,389 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Judson", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  body {
+    /* background: #111;
+    color: #eee;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh; */
+  }
+
+  /* ---------------- TEXT STYLES ---------------- */
+  .bold-text{
+    font-weight: bold;
+}
+
+/* ---------------- GLOBAL STYLES ---------------- */
+.page-section {
+    padding: 2rem;
+}
+
+h1 {
+    margin-bottom: 1rem;
+}
+
+.card {
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+}
+
+.inv-hr {
+    border-color: white;
+    border-width: 1px;
+    opacity: 0.2;
+}
+.page-section h2 {
+    font-size: 36px;
+    color: white;
+}
+
+/* ---------------- Navigation ---------------- */
+
+#nav-logo {
+    width: 120px;
+    height: auto;
+}
+.bg-dark {
+    background-color: black !important;
+}
+.nav-link {
+    text-align: left !important;  
+}
+
+.navbar-nav {
+    padding-top: 2%;
+}
+
+.inv-hr .nav-divider {
+    margin-top: 1rem;
+}
+
+.nav-item {
+    color: antiquewhite;
+}
+
+
+/* ---------------- HERO ---------------- */
+.jumbotron {
+    background-image: url('../media/images/storeFront.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    max-height: fit-content;
+    margin-bottom: 0 !important; /* Remove default margin */
+    display: flex;
+    align-items: center;
+    border-radius: 0% !important;
+    color: white;
+}
+
+.jumbotron-body {
+    padding: 2rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
+    /* font-family: "Judson", serif; */
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+.jumbotron-body h1{
+    margin-bottom: 0px !important;
+    line-height: 3rem;
+    text-shadow: #2b1e0b 1px 0 10px;
+}
+
+.btn-lg {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.7);
+    width: 150px;
+    border-radius: 25px;
+    ;
+} 
+
+.btn-lg:hover {
+    background-color: white;
+    color: var(--secondary-bg-color);
+    transition: background-color 0.3s ease-out;
+}
+
+/* ---------------- INTRO ---------------- */
+.intro {
+    background-color: black;
+}
+.intro-body {
+    color: white;
+    padding: 2rem;
+    padding-top: 35rem;
+    padding-bottom: 5rem;
+}
+.intro-body p {
+    margin: 0;
+    text-align: right;
+    font-size: 35px;
+    text-align: center;
+}
+
+.card.intro-card {
+    background-image: url("/media/images/frontDoor.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* ---------------- IN STOCK ---------------- */
+.store {
+    /* background: linear-gradient(to top, #1c1f16, black); */
+    background-color: black;
+}
+
+.card.jewellery {
+    background-image: url('/media/images/Laura_Jewellery.png');
+    background-size: cover; /* Makes sure the image covers the whole button */
+    background-position: center; /* Centers the image within the button */
+    width: 100%; /* Adjust the width as necessary */
+    height: 200px; /* Adjust the height as necessary */
+}
+.jewellery2 img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+    display: block; /* Ensures there is no extra space below the image */
+}
+.card.brands {
+    background-image: url('/media/images/Brands.png');
+    background-size: cover; /* Makes sure the image covers the whole button */
+    background-position: center; /* Centers the image within the button */
+    width: 100%; /* Adjust the width as necessary */
+    height: 200px; /* Adjust the height as necessary */
+}
+.brands2 img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+    display: block; /* Ensures there is no extra space below the image */
+}
+#expandableCard {
+    width: 100%;
+    height: 100%;
+    background-color: black; /* Set the entire background to black */
+    position: relative; /* Necessary for absolutely positioned children */
+    color: white; /* Makes the text color white for better contrast */
+}
+  
+
+  /* --------------------------------------------------------- */
+  /* --------------------------------------------------------- */
+
+  @media (max-width: 768px) {
+    /* ---------------- Global styles ----------------*/
+    .page-section {
+        padding: 0.5rem;
+    }
+    .card-headshot {
+        width: 200px;
+        height: 200px;
+    }
+    .container h2 {
+        padding-top: 1.5rem;
+    }
+    .flex-row {
+        /* padding: 3.25rem; */
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+
+    /* ---------------- navbar ---------------- */
+    .nav-link {
+        /* color: antiquewhite !important; */
+        text-align: center !important;
+        font-size: 22px;
+    }
+
+    /* ---------------- jumbotron ---------------- */
+    .jumbotron-body h1{
+        margin-bottom: 0px !important;
+        line-height: 1.8rem;
+        text-shadow: #2b1e0b 1px 0 5px;
+        font-size: 2rem;
+    }
+    .jumbotron-body {
+        padding: 2rem;
+        padding-top: 8rem;
+    }
+
+    /* ---------------- Intro ---------------- */
+    .intro-body p {
+        font-size: 28px;
+    }
+  }
+
+
+
+
+
+  /* --------------------------------------------------------- */
+  /* --------------------------------------------------------- */
+  /* ---------------- EXPANDING CARDS ---------------- */
+  .card .header h2 {
+    font-size: 2rem;
+  }
+  
+  .card .header h3 {
+    font-size: 1rem;
+    font-weight: 300;
+    opacity: 0.75;
+  }
+  
+  /* Resetting buttons defaults stylings */
+  button {
+    display: flex;
+    border: none;
+    background: transparent;
+    color: inherit;
+    font-size: inherit;
+    text-align: inherit;
+  }
+  
+  button:hover {
+    cursor: pointer;
+  }
+  
+  .card {
+    --padding-amount: 1.4rem;
+    --border-radius: 1.5rem;
+    width: min(400px, 80vw);
+    position: relative;
+    clip-path: inset(0 0 0 0 round var(--border-radius));
+    background: #333;
+    transform-origin: top left;
+    overflow: auto;
+  }
+  
+  .card .img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+  
+  .card .header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: top left;
+    transform: translate(var(--padding-amount), var(--padding-amount));
+  }
+  
+  .card .content {
+    padding: 2rem;
+  }
+  
+  .card #close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #111;
+    border-radius: var(--border-radius);
+    padding: 0.4rem 1.6rem;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.15s ease-in-out;
+    transform: translate(calc(var(--padding-amount) * -1), var(--padding-amount));
+  }
+  
+  .card#expandableCard {
+    width: 100%;
+    height: 100vh;
+  }
+  
+  /* Step 1 - Scaling down */
+  .card#expandableCard {
+    --width-scale: calc(var(--screen-width) / var(--width));
+    transform: scale(calc(1 / var(--width-scale)));
+    clip-path: inset(
+      0 0 0 0 round calc(var(--border-radius) * var(--width-scale))
+    );
+  }
+  
+  .card#expandableCard .header {
+    transform: translate(
+        calc(var(--padding-amount) * var(--width-scale)),
+        calc(var(--padding-amount) * var(--width-scale))
+      )
+      scale(var(--width-scale));
+  }
+  
+  /* Step 2 - Positioning the expanded element */
+  .card#expandableCard {
+    --width-scale: calc(var(--screen-width) / var(--width));
+    top: 0;
+    top: 0;
+    position: fixed;
+    opacity: 0.5;
+    transform: translate(var(--left), var(--top))
+      scale(calc(1 / var(--width-scale)));
+  }
+  
+  /* Step 3 - Masking the extra part */
+  .card#expandableCard {
+    --bottom-clip: calc(
+      calc(var(--screen-height) - var(--height) * var(--width-scale)) /
+        var(--screen-height) * 100%
+    );
+    clip-path: inset(
+      0 0 var(--bottom-clip) 0 round
+        calc(var(--border-radius) * var(--width-scale))
+    );
+  }
+  
+  /* Step 4 - Final Adjustments */
+  .card#expandableCard {
+    opacity: 0;
+    will-change: transform, clip-path;
+  }
+  
+  .card#expandableCard[data-state="hidden"] {
+    pointer-events: none;
+  }
+  
+  .card#expandableCard:not([data-state="hidden"]) {
+    transition: transform 0.3s ease-in-out, clip-path 0.3s ease-in-out;
+  }
+  .card#expandableCard:not([data-state="hidden"]) .header {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .card#expandableCard[data-state="expanded"] {
+    opacity: 1;
+    clip-path: inset(0 0 0 0 round 0);
+    transform: translate(0, 0);
+  }
+  
+  .card#expandableCard[data-state="expanded"] .header {
+    transform: translate(var(--padding-amount), var(--padding-amount)) scale(1);
+  }
+  
+  .card#expandableCard[data-state="expanded"] #close {
+    opacity: 1;
+  }
+  
+  .card#expandableCard[data-state="shrink"] {
+    opacity: 1;
+    transform: translate(var(--left), var(--top))
+      scale(calc(1 / var(--width-scale)));
+    clip-path: inset(
+      0 0 var(--bottom-clip) 0 round
+        calc(var(--border-radius) * var(--width-scale))
+    );
+  }
