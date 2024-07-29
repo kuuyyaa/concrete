@@ -332,6 +332,14 @@ h1 {
 .card-body {
     background-color: black;
 }
+.card-body .card-list {
+    padding-left: 30px;  /* Adds indentation to the list */
+    list-style-type: disc;  /* Ensures list items are marked with bullets */
+}
+
+.card-body .card-list li {
+    margin-bottom: 5px;  /* Adds a little space below each list item for better readability */
+}
 
   /* --------------------------------------------------------- */
   /* --------------------------------------------------------- */
