@@ -52,8 +52,8 @@ h1 {
     width: 120px;
     height: auto;
 }
-.bg-dark {
-    background-color: black !important;
+.navbar.bg-dark {
+    background-color: #000000 !important;
 }
 .nav-link {
     text-align: left !important;  
@@ -278,7 +278,7 @@ h1 {
   @media (max-width: 768px) {
     /* ---------------- Global styles ----------------*/
     .page-section {
-        padding: 0.5rem;
+        padding: 1.5rem;
     }
     .card-headshot {
         width: 200px;
@@ -314,7 +314,7 @@ h1 {
 
     /* ---------------- Intro ---------------- */
     .intro-body p {
-        font-size: 28px;
+        font-size: 25px;
     }
   }
 
