@@ -317,7 +317,7 @@ h1 {
 
 /* ---------------- WORKSHOP ---------------- */
 .page-section.workshop {
-    background: linear-gradient(to bottom, #1d150a, black);
+    background: linear-gradient(to bottom, black, #1d150a);
     background-repeat: no-repeat;
     background-size: 100%;
     max-height: fit-content;
