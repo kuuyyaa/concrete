@@ -345,6 +345,10 @@ div.stock .card {
     color: #e6e6e6;
 }
 
+.resident-card ol {
+    margin-bottom: 0;
+}
+
 /* Style for the button */
 .resident-btn-primary {
     background-color: rgba(0, 0, 0, 0.5); /* Slightly transparent blue background */
