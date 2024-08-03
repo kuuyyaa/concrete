@@ -529,7 +529,23 @@
 
 
 
-    
+    <!-- Passive hover -->
+    <script>
+        document.addEventListener('scroll', function() {
+            var buttons = document.querySelectorAll('.card');
+
+            buttons.forEach(function(button) {
+                var rect = button.getBoundingClientRect();
+                var screenHeight = window.innerHeight;
+
+                if (rect.top <= screenHeight * 0.6 && rect.bottom >= screenHeight * 0.4) {
+                    button.classList.add('hovered');
+                } else {
+                    button.classList.remove('hovered');
+                }
+            });
+        });
+    </script>
 
 
     <!-- External JS Scripts -->
@@ -539,7 +555,6 @@
 
     <!-- Custom JS Scripts -->
     <script src="js/typewrite.js"></script>
-    <script src="js/index.js"></script>
 </body>
 </html>
 
