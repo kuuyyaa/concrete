@@ -220,6 +220,7 @@ div.stock .card {
     object-fit: cover;
     display: block;
     transition: transform 0.3s ease-in-out;
+    overflow: hidden;
 }
 
 .card:hover .button-image {
