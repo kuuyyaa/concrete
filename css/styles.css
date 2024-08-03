@@ -215,6 +215,13 @@ div.stock .card {
     margin-bottom: 20px;
     border-radius: 8px;
     overflow: hidden;
+    --padding-amount: 1.4rem;
+    width: min(400px, 80vw);
+    position: relative;
+    background: #333;
+    transform-origin: top left;
+    overflow: hidden;
+    border-color: #000000;
 }
 
 .card-body {
@@ -232,9 +239,6 @@ div.stock .card {
     overflow: hidden;
 }
 
-.card:hover .button-image {
-    transform: scale(1.05);
-}
 
 /* Style for the overlay */
 .card .overlay {
@@ -481,152 +485,19 @@ div.event .card {
   /* --------------------------------------------------------- */
   /* --------------------------------------------------------- */
   /* ---------------- EXPANDING CARDS ---------------- */
-  .card .header h2 {
-    font-size: 2rem;
-  }
+
   
-  .card .header h3 {
-    font-size: 1rem;
-    font-weight: 300;
-    opacity: 0.75;
-  }
   
-  /* Resetting buttons defaults stylings */
-  button {
-    display: flex;
-    border: none;
-    background: transparent;
-    color: inherit;
-    font-size: inherit;
-    text-align: inherit;
-  }
   
-  button:hover {
-    cursor: pointer;
-  }
+
   
-  .card {
-    --padding-amount: 1.4rem;
-    width: min(400px, 80vw);
-    position: relative;
-    background: #333;
-    transform-origin: top left;
-    overflow: auto;
-    border-color: #000000;
-  }
   
-  .card .img {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-  }
   
-  .card .header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform-origin: top left;
-    transform: translate(var(--padding-amount), var(--padding-amount));
-  }
+ 
   
-  .card .content {
-    padding: 2rem;
-  }
+ 
   
-  .card #close {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: #111;
-    border-radius: var(--border-radius);
-    padding: 0.4rem 1.6rem;
-    z-index: 10;
-    opacity: 0;
-    transition: opacity 0.15s ease-in-out;
-    transform: translate(calc(var(--padding-amount) * -1), var(--padding-amount));
-  }
+
   
-  .card#expandableCard {
-    width: 100%;
-    height: 100vh;
-  }
   
-  /* Step 1 - Scaling down */
-  .card#expandableCard {
-    --width-scale: calc(var(--screen-width) / var(--width));
-    transform: scale(calc(1 / var(--width-scale)));
-    clip-path: inset(
-      0 0 0 0 round calc(var(--border-radius) * var(--width-scale))
-    );
-  }
-  
-  .card#expandableCard .header {
-    transform: translate(
-        calc(var(--padding-amount) * var(--width-scale)),
-        calc(var(--padding-amount) * var(--width-scale))
-      )
-      scale(var(--width-scale));
-  }
-  
-  /* Step 2 - Positioning the expanded element */
-  .card#expandableCard {
-    --width-scale: calc(var(--screen-width) / var(--width));
-    top: 0;
-    top: 0;
-    position: fixed;
-    opacity: 0.5;
-    transform: translate(var(--left), var(--top))
-      scale(calc(1 / var(--width-scale)));
-  }
-  
-  /* Step 3 - Masking the extra part */
-  .card#expandableCard {
-    --bottom-clip: calc(
-      calc(var(--screen-height) - var(--height) * var(--width-scale)) /
-        var(--screen-height) * 100%
-    );
-    clip-path: inset(
-      0 0 var(--bottom-clip) 0 round
-        calc(var(--border-radius) * var(--width-scale))
-    );
-  }
-  
-  /* Step 4 - Final Adjustments */
-  .card#expandableCard {
-    opacity: 0;
-    will-change: transform, clip-path;
-  }
-  
-  .card#expandableCard[data-state="hidden"] {
-    pointer-events: none;
-  }
-  
-  .card#expandableCard:not([data-state="hidden"]) {
-    transition: transform 0.3s ease-in-out, clip-path 0.3s ease-in-out;
-  }
-  .card#expandableCard:not([data-state="hidden"]) .header {
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .card#expandableCard[data-state="expanded"] {
-    opacity: 1;
-    clip-path: inset(0 0 0 0 round 0);
-    transform: translate(0, 0);
-  }
-  
-  .card#expandableCard[data-state="expanded"] .header {
-    transform: translate(var(--padding-amount), var(--padding-amount)) scale(1);
-  }
-  
-  .card#expandableCard[data-state="expanded"] #close {
-    opacity: 1;
-  }
-  
-  .card#expandableCard[data-state="shrink"] {
-    opacity: 1;
-    transform: translate(var(--left), var(--top))
-      scale(calc(1 / var(--width-scale)));
-    clip-path: inset(
-      0 0 var(--bottom-clip) 0 round
-        calc(var(--border-radius) * var(--width-scale))
-    );
-  }
+ 
