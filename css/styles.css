@@ -198,37 +198,40 @@ div.stock .card {
 }
 
 .card {
-    position: relative;
-    padding: 0;
-    border: none;
-    background: none;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Full width of the container */
+    max-width: 100%; /* Ensure it doesn't exceed the screen width */
     margin-bottom: 20px;
     border-radius: 8px;
     overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: #fff; /* White background for the card */
+    display: flex;
+    flex-direction: column;
 }
 
-/* Style for the button image */
-.card .button-image {
+/* Ensure the image fills the top of the card */
+.button-image {
     width: 100%;
     height: 200px; /* Adjust height as needed */
-    object-fit: cover;
-    display: block;
-    transition: transform 0.3s ease-in-out;
-    overflow: hidden;
+    object-fit: cover; /* Ensure the image covers the area */
 }
 
-.card:hover .button-image {
-    transform: scale(1.05);
+/* Ensure the card body has some padding and use Flexbox for alignment */
+.custom-card-body {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Prevent scrolling */
 }
 
-/* Style for the overlay */
-.card .overlay {
+/* Style for the card title */
+.subtitle {
+    font-size: 1.5rem; /* Adjust font size as needed */
+    margin-bottom: 10px;
+}
+
+/* Overlay for the in-store cards */
+.overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -247,23 +250,11 @@ div.stock .card {
     opacity: 1;
 }
 
-/* Style for the subtitle */
-.card .subtitle {
-    font-size: 24px; /* Adjust font size as needed */
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-/* Ensure the expandable card is initially hidden */
-.card-expandable {
-    display: none;
-}
-
-.card-expandable[data-state="expanded"] {
-    display: block;
-}
-
-.card-expandable[data-state="hidden"] {
-    display: none;
+/* Style for the collapse content */
+.collapse .custom-card-body {
+    border: none;
+    box-shadow: none;
+    overflow: visible; /* Prevent scrolling */
 }
   
 /* ---------------- EVENTS ---------------- */
@@ -438,6 +429,14 @@ div.event .card {
         justify-content: center;
         gap: 20px; /* Adjust gap between cards as needed */
     }
+    .card {
+        width: 100%;
+    }
+
+    .button-image {
+        width: 100%;
+        height: auto; /* Ensure the image scales correctly */
+    }
 
     /* ---------------- Residents ---------------- */
     .resident-card {
@@ -457,9 +456,6 @@ div.event .card {
   /* --------------------------------------------------------- */
   /* --------------------------------------------------------- */
   /* ---------------- EXPANDING CARDS ---------------- */
-  .card .header h2 {
-    font-size: 2rem;
-  }
   
   .card .header h3 {
     font-size: 1rem;
