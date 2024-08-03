@@ -228,70 +228,17 @@ div.stock .card {
   
 /* ---------------- EVENTS ---------------- */
 
-.container {
-    display: flex;
-    flex-direction: column;
-}
-.row {
-    padding-bottom: 1rem;
-}
 .events {
     background: linear-gradient(to bottom, black, #1d150a);
 }
 
-.events .card {
-    position: relative;
-    overflow: hidden;
-    border-color: #000000;
+div.event .card {
+    border: none;
+    margin-bottom: 0;
 }
-
-.events .card-img-top {
-    width: auto;
-    height: 100%;
-    object-fit: cover; /* Ensures the image covers the area fully */
-}
-
-.events .card-body {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
-    color: white;
-    padding: 20px;
-    transition: background 0.3s ease-in-out;
-}
-
-.events .card:hover .card-body {
-    background: rgba(0, 0, 0, 0.7); /* Darker on hover */
-}
-
-.events .card-title {
-    margin-bottom: 10px;
-}
-
-.events .card-text {
-    color: #bfbfbf;
-}
-
-.events .btn-primary {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-color: rgba(0, 0, 0, 0);
-    width: fit-content;
-    border-radius: 20px;
-    
-}
-
-.btn-primary:hover {
-    background-color: white;
-    color: #000000;
-    border-color: rgba(0, 0, 0, 0);
-    transition: background-color 0.3s ease-out;
-} 
-
-.card-img-large {
-    height: 300px;
-    width: auto;
+.event {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 
