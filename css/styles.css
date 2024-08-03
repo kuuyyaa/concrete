@@ -321,7 +321,7 @@ div.stock .card {
     height: ;
 }
 
-.residents .card {
+.residents .resident-card {
     border: none;
 }
 
@@ -432,6 +432,16 @@ div.stock .card {
         align-items: center;
         justify-content: center;
         gap: 20px; /* Adjust gap between cards as needed */
+    }
+
+    /* ---------------- Residents ---------------- */
+    .resident-card {
+        width: 100%;
+    }
+
+    .card-img-large {
+        width: 100%;
+        height: auto; /* Ensure the image scales correctly */
     }
   }
 
