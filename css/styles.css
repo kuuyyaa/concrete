@@ -143,6 +143,45 @@ h1 {
     margin-bottom: 1.5rem;
 }
 
+.links {
+    background-color: black;
+}
+
+.quick-links-list {
+    list-style-type: none;
+    padding: 0;
+    text-align: left; 
+}
+
+.quick-links-list li {
+    margin: 10px 0;
+}
+
+.quick-links-list li a {
+    position: relative;
+    text-decoration: none;
+    font-size: 30px;
+    color: #fff; /* Text color */
+    transition: color 0.3s ease;
+    padding-bottom: 2px; /* Space between text and underline */
+}
+
+.quick-links-list li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Position the underline */
+    width: 100%;
+    height: 1px; /* Thickness of the underline */
+    background-color: rgb(54, 53, 53); /* Color of the underline */
+    transition: background-color 0.3s ease;
+}
+
+.quick-links-list li a:hover::after {
+    background-color: rgb(206, 169, 121); /* Color of the underline on hover */
+}
+
+
 /* ---------------- IN STOCK ---------------- */
 .store {
     /* background: linear-gradient(to top, #1c1f16, black); */
