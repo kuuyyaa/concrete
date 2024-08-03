@@ -40,6 +40,7 @@ h1 {
     border-color: white;
     border-width: 1px;
     opacity: 0.2;
+    margin-top: 0px;
 }
 
 .inv-hr {
@@ -321,6 +322,7 @@ div.card.card-body.custom-card-body.hovered {
     width: 100%; /* Full width for carousels */
     border-radius: 8px; /* Add border radius to the carousel */
     overflow: hidden; /* Ensure rounded corners are visible */
+    margin-bottom: 30px;
 }
 
 .carousel-inner img {
@@ -329,17 +331,6 @@ div.card.card-body.custom-card-body.hovered {
     object-fit: cover; /* Ensure the image covers the area */
 }
 
-/* Carousel indicators styling */
-.carousel-indicators li {
-    background-color: #007bff; /* Blue background for the indicators */
-    border-radius: 50%;
-    width: 10px;
-    height: 10px;
-}
-
-.carousel-indicators .active {
-    background-color: #0056b3; /* Darker blue for the active indicator */
-}
   
 /* ---------------- EVENTS ---------------- */
 
