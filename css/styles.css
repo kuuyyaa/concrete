@@ -153,55 +153,77 @@ h1 {
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
+div.stock .card {
+    border: none;
+    margin-bottom: 0;
+}
 
-.card.jewellery {
-    background-image: url('/media/images/Laura_Jewellery.png');
-    background-size: cover; /* Makes sure the image covers the whole button */
-    background-position: center; /* Centers the image within the button */
-    width: 100%; /* Adjust the width as necessary */
-    height: 200px; /* Adjust the height as necessary */
-    border-color: #000000;
+.card {
+    position: relative;
+    padding: 0;
+    border: none;
+    background: none;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
 }
-.jewellery-expandable img {
+
+/* Style for the button image */
+.card .button-image {
     width: 100%;
-    height: auto;
-    object-fit: cover; /* Ensures the image covers the container without distortion */
-    display: block; /* Ensures there is no extra space below the image */
-}
-.card.brands {
-    background-image: url('/media/images/Brands.png');
-    background-size: cover; /* Makes sure the image covers the whole button */
-    background-position: center; /* Centers the image within the button */
-    width: 100%; /* Adjust the width as necessary */
-    height: 200px; /* Adjust the height as necessary */
-    border-color: #000000;
-}
-.brands-expandable img {
-    width: 100%;
-    height: auto;
-    object-fit: cover; 
-    display: block; 
-}
-.card.magazines {
-    background-image: url('/media/images/Casual.png');
-    background-size: cover; 
-    background-position: center; 
-    width: 100%; 
-    height: 200px;
-    border-color: #000000;
-}
-.magazines-expandable img {
-    width: 100%;
-    height: auto;
-    object-fit: cover; /* Ensures the image covers the container without distortion */
+    height: 200px; /* Adjust height as needed */
+    object-fit: cover;
     display: block;
+    transition: transform 0.3s ease-in-out;
 }
-#expandableCard {
+
+.card:hover .button-image {
+    transform: scale(1.05);
+}
+
+/* Style for the overlay */
+.card .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    background-color: black; /* Set the entire background to black */
-    position: relative; /* Necessary for absolutely positioned children */
-    color: white; /* Makes the text color white for better contrast */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.card:hover .overlay {
+    opacity: 1;
+}
+
+/* Style for the subtitle */
+.card .subtitle {
+    font-size: 24px; /* Adjust font size as needed */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Ensure the expandable card is initially hidden */
+.card-expandable {
+    display: none;
+}
+
+.card-expandable[data-state="expanded"] {
+    display: block;
+}
+
+.card-expandable[data-state="hidden"] {
+    display: none;
 }
   
 /* ---------------- EVENTS ---------------- */
@@ -400,6 +422,16 @@ h1 {
     /* ---------------- Intro ---------------- */
     .intro-body p {
         font-size: 25px;
+    }
+
+    /* ---------------- In Store ---------------- */
+
+    .stock {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px; /* Adjust gap between cards as needed */
     }
   }
 

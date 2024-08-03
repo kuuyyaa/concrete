@@ -1,11 +1,7 @@
-const ogCard = document.getElementById("card");
-const exCard = document.getElementById("expandableCard");
-const close = document.getElementById("close");
-
 /**
  * Generates required data for animation
  */
-const updatePos = () => {
+const updatePos = (ogCard, exCard) => {
   const { top, left, width, height } = ogCard.getBoundingClientRect();
 
   const screenWidth = window.innerWidth;
@@ -25,36 +21,44 @@ const updatePos = () => {
 /**
  * onExpand adds the required data to extendableCard.
  */
-const onExpand = () => {
-  updatePos();
+const onExpand = (ogCard, exCard) => {
+  updatePos(ogCard, exCard);
 
-  // Since we have to wait for the variables to be applied,
-  // the states have to be updated on a next page render.
-  // For this purpose  we add a timeout with 1ms timeout time.
   requestAnimationFrame(() => {
-    // Setting data attributes on card elements
     exCard.setAttribute("data-state", "expanded");
     ogCard.setAttribute("data-state", "hidden");
   });
 };
 
-ogCard.addEventListener("click", onExpand);
-
 /**
- * onShrinks shrinks down the card and hide it.
+ * onShrink shrinks down the card and hides it.
  */
-const onShrink = () => {
-  updatePos();
+const onShrink = (ogCard, exCard) => {
+  updatePos(ogCard, exCard);
 
   exCard.setAttribute("data-state", "shrink");
 
   setTimeout(() => {
-    // Setting data attributes on card elements
     exCard.setAttribute("data-state", "hidden");
     ogCard.setAttribute("data-state", "visible");
   }, 300 + 1);
 };
 
-close.addEventListener("click", onShrink);
+document.addEventListener('DOMContentLoaded', () => {
+  const cardPairs = [
+    { ogCardId: "card-jewellery", exCardId: "expandableCard-jewellery", closeId: "close-jewellery" },
+    { ogCardId: "card-brands", exCardId: "expandableCard-brands", closeId: "close-brands" },
+    { ogCardId: "card-magazines", exCardId: "expandableCard-magazines", closeId: "close-magazines" }
+  ];
 
+  cardPairs.forEach(({ ogCardId, exCardId, closeId }) => {
+    const ogCard = document.getElementById(ogCardId);
+    const exCard = document.getElementById(exCardId);
+    const close = document.getElementById(closeId);
 
+    if (ogCard && exCard && close) {
+      ogCard.addEventListener("click", () => onExpand(ogCard, exCard));
+      close.addEventListener("click", () => onShrink(ogCard, exCard));
+    }
+  });
+});
