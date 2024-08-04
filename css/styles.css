@@ -482,6 +482,31 @@ div.event .card {
 .card-body .card-list li {
     margin-bottom: 5px;  /* Adds a little space below each list item for better readability */
 }
+
+/* Workshop Enroll Button */
+.enroll-button {
+    /* display: block; */
+    align-self: flex-end;
+    background-color: white !important;
+    border: none;
+    color: black;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+}
+
+.enroll-button i {
+    color: black;
+}
+
+.enroll-button:hover {
+    background-color: #f0f0f0; /* Optional: Change background color on hover */
+}
+
 /* ---------------- Marketing ---------------- */
 .marketing {
     background: linear-gradient(to bottom, #1d150a, black);
