@@ -539,7 +539,7 @@ div.event .card {
         height: 200px;
     }
     .container h2 {
-        padding-top: 1.5rem;
+        /* padding-top: 1.5rem; */
     }
     .flex-row {
         /* padding: 3.25rem; */
