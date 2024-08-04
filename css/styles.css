@@ -331,6 +331,22 @@ div.card.card-body.custom-card-body.hovered {
     object-fit: cover; /* Ensure the image covers the area */
 }
 
+.close-button {
+    display: block;
+    margin: 20px auto 0; /* Center the button horizontally and add top margin */
+    background-color: #007bff; /* Background color for the button */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    background-color: #0056b3; /* Darker background color on hover */
+}
+
+
   
 /* ---------------- EVENTS ---------------- */
 

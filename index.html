@@ -205,8 +205,7 @@
                             <span class="sr-only">Next</span>
                         </a>
                     </div>
-
-
+                    <button type="button" class="btn btn-primary close-button" data-target="#collapseJewellery">Close</button>
                 </div>
             </div>
         </div>
@@ -703,14 +702,41 @@
 
     <!-- Passive hover -->
     <script>
+        let lastScrollPosition = 0;
+    
+        document.addEventListener('DOMContentLoaded', function() {
+            // Save the scroll position before expanding
+            var buttons = document.querySelectorAll('.card');
+            buttons.forEach(function(button) {
+                button.addEventListener('click', function() {
+                    lastScrollPosition = window.scrollY;
+                });
+            });
+    
+            // Handle close button click
+            var closeButtons = document.querySelectorAll('.close-button');
+            closeButtons.forEach(function(button) {
+                button.addEventListener('click', function() {
+                    var target = button.getAttribute('data-target');
+                    var targetElement = document.querySelector(target);
+                    if (targetElement) {
+                        $(targetElement).collapse('hide');
+                    }
+                    // Restore the scroll position after collapsing
+                    window.scrollTo(0, lastScrollPosition);
+                });
+            });
+        });
+    
+        // Scroll event listener to handle hover effect
         document.addEventListener('scroll', function() {
             var buttons = document.querySelectorAll('.card');
-
+    
             buttons.forEach(function(button) {
                 var rect = button.getBoundingClientRect();
                 var screenHeight = window.innerHeight;
-
-                if (rect.top <= screenHeight * 0.55 && rect.bottom >= screenHeight * 0) {
+    
+                if (rect.top <= screenHeight * 0.55 && rect.bottom >= 0) {
                     button.classList.add('hovered');
                 } else {
                     button.classList.remove('hovered');
