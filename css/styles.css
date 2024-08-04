@@ -492,6 +492,39 @@ div.event .card {
 }
 
 
+/* ---------------- Footer ---------------- */
+.contact {
+    background-color: black;
+    color: #fff;
+    line-height: 1.7;
+}
+
+.contact a {
+    text-decoration: none; /* Remove default underline */
+    color: #fff;
+    position: relative; /* Required for the pseudo-element positioning */
+}
+
+.contact a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Adjust as needed to position the underline correctly */
+    width: 100%;
+    height: 2px; /* Thickness of the underline */
+    background-color: rgba(206, 169, 121, 0.442); /* Color of the underline */
+}
+
+.email {
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+
+
+
+
+
 
   /* --------------------------------------------------------- */
   /* --------------------------------------------------------- */
@@ -556,6 +589,20 @@ div.event .card {
     .card-img-large {
         width: 100%;
         height: auto; /* Ensure the image scales correctly */
+    }
+
+    /* ---------------- Footer ---------------- */
+
+    .footer .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .page-section .footer-section {
+        width: 100%;
+        margin-bottom: 20px;
+        text-align: center;
     }
   }
 
