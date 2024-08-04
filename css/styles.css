@@ -326,8 +326,8 @@ div.card.card-body.custom-card-body.hovered {
 }
 
 .instagram-icon {
-    color: white;
-    font-size: 24px;
+    color: rgb(106, 105, 105);
+    font-size: 26px;
     text-decoration: none;
 }
 
@@ -361,6 +361,7 @@ div.card.card-body.custom-card-body.hovered {
 .close-button:hover {
     color: rgb(206, 169, 121) !important; /* Change color on hover */
 }
+
 
 
   
