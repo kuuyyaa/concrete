@@ -437,14 +437,14 @@ div.event .card {
 
 /* Style for the button */
 .resident-btn-primary {
-    background-color: rgba(0, 0, 0, 0.5); /* Slightly transparent blue background */
+    background-color: #fff; /* Slightly transparent blue background */
     border: none;
-    color: #fff;
+    color: #000;
     text-align: center;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 10px 14px;
+    border-radius: 8px;
     text-decoration: none;
-    align-self: flex-end; /* Aligns the button to the right */
+    align-self: flex-start; /* Aligns the button to the right */
     margin-top: auto; /* Pushes the button to the bottom */
     display: flex;
     align-items: center;
