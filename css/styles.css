@@ -313,16 +313,33 @@ div.card.card-body.custom-card-body.hovered {
     padding: 20px;
 }
 
+
+.header-with-icon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .brand-header {
     text-align: left; /* Align headers to the left */
     color: white; /* Text color for headers */
+}
+
+.instagram-icon {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.instagram-icon:hover {
+    color: rgb(206, 169, 121); /* Instagram brand color on hover */
 }
 
 .carousel {
     width: 100%; /* Full width for carousels */
     border-radius: 8px; /* Add border radius to the carousel */
     overflow: hidden; /* Ensure rounded corners are visible */
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .carousel-inner img {
@@ -342,7 +359,7 @@ div.card.card-body.custom-card-body.hovered {
 }
 
 .close-button:hover {
-    color: rgb(206, 169, 121); /* Change color on hover */
+    color: rgb(206, 169, 121) !important; /* Change color on hover */
 }
 
 
