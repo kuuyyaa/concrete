@@ -140,6 +140,12 @@ h1 {
     font-size: 35px;
     text-align: center;
 }
+.intro-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
 
 .card.intro-card {
     background-image: url("/media/images/frontDoor.jpg");
@@ -553,6 +559,22 @@ div.event .card {
 
   /* --------------------------------------------------------- */
   /* --------------------------------------------------------- */
+  @media (min-width: 769px) {
+    .jumbotron {
+        height: 420px;
+    }
+    #quick-links {
+        display: none;
+    }
+
+    .intro-card {
+        width: 50%;
+    }
+
+    .container {
+        width: 52% !important;
+    }
+}
 
   @media (max-width: 768px) {
     /* ---------------- Global styles ----------------*/
@@ -563,9 +585,7 @@ div.event .card {
         width: 200px;
         height: 200px;
     }
-    .container h2 {
-        /* padding-top: 1.5rem; */
-    }
+    
     .flex-row {
         /* padding: 3.25rem; */
         padding-top: 0.5rem;
@@ -593,7 +613,7 @@ div.event .card {
 
     /* ---------------- Intro ---------------- */
     .intro-body p {
-        font-size: 25px;
+        font-size: 23px;
     }
 
     /* ---------------- In Store ---------------- */
@@ -604,6 +624,16 @@ div.event .card {
         align-items: center;
         justify-content: center;
         gap: 20px; /* Adjust gap between cards as needed */
+    }
+
+    .close-button {
+        display: block;
+        margin: 20px 0 0 auto;
+        background-color: rgb(62, 62, 62) !important;
+        border: black !important;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
     }
 
     /* ---------------- Residents ---------------- */
@@ -633,24 +663,3 @@ div.event .card {
 
 
 
-
-
-  /* --------------------------------------------------------- */
-  /* --------------------------------------------------------- */
-  /* ---------------- EXPANDING CARDS ---------------- */
-
-  
-  
-  
-
-  
-  
-  
- 
-  
- 
-  
-
-  
-  
- 
