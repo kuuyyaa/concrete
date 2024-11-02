@@ -7,16 +7,14 @@
     font-style: normal;
   }
   
-  body {
-    /* background: #111;
-    color: #eee;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh; */
-  }
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    overflow: visible; /* Prevent overflow from being hidden */
+    position: relative; /* Ensure the container adjusts with the expanded content */
+}
 
   /* ---------------- TEXT STYLES ---------------- */
   .bold-text{
@@ -81,7 +79,7 @@ h1 {
 
 /* ---------------- HERO ---------------- */
 .jumbotron {
-    background-image: url('../media/images/storeFront.jpg');
+    background-image: url('../media/images/storeFront2.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -147,13 +145,14 @@ h1 {
     height: auto;
 }
 
-.card.intro-card {
+.intro-card {
     background-image: url("/media/images/frontDoor.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    margin-top: 1.5rem;
+    /* margin-top: 1.5rem; */
     margin-bottom: 1.5rem;
+    width: 100%;
 }
 
 .links {
@@ -350,7 +349,7 @@ div.card.card-body.custom-card-body.hovered {
 
 .carousel-inner img {
     width: 100%;
-    height: 300px; /* Adjust height as needed */
+    height: 400px; /* Adjust height as needed */
     object-fit: cover; /* Ensure the image covers the area */
 }
 
@@ -559,9 +558,16 @@ div.event .card {
 
   /* --------------------------------------------------------- */
   /* --------------------------------------------------------- */
+  @media (min-width: 576px) {
+    .jumbotron {
+      padding: 4rem 2rem;
+      height: 95vh;
+    }
+  }
+
   @media (min-width: 769px) {
     .jumbotron {
-        height: 420px;
+        /* height: 420px; */
     }
     #quick-links {
         display: none;
@@ -573,6 +579,19 @@ div.event .card {
 
     .container {
         width: 52% !important;
+    }
+
+    .card {
+        width: 95%;
+        height: 20rem;
+    }
+
+    .button-image {
+        height: auto !important;
+    }
+
+    .carousel-inner img {
+        height: 500px; 
     }
 }
 
